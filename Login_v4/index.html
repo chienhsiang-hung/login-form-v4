@@ -26,6 +26,9 @@
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
+
+	<script src="https://apis.google.com/js/platform.js" async defer></script>
+	<meta name="google-signin-client_id" content="469741540284-nc63sg32cguq4nki5foukt30kuq5hfk4.apps.googleusercontent.com">
 </head>
 <body>
 	
@@ -83,7 +86,7 @@
 							<i class="fa fa-google"></i>
 						</a>
 					</div>
-
+					
 					<div class="flex-col-c p-t-155">
 						<span class="txt1 p-b-17">
 							Or Sign Up Using
@@ -93,11 +96,14 @@
 							Sign Up
 						</a>
 					</div>
+					<div class="g-signin2" data-onsuccess="onSignIn"></div>
 				</form>
 			</div>
 		</div>
 	</div>
-	
+	<button onclick=initClient()>
+		sign in with google
+	</button>
 
 	<div id="dropDownSelect1"></div>
 	
@@ -118,5 +124,21 @@
 <!--===============================================================================================-->
 	<script src="js/main.js"></script>
 
+	<script>
+	var GoogleAuth; // Google Auth object.
+	function initClient() {
+	  gapi.client.init({
+		  'apiKey': 'AIzaSyC1AzAzvfGqvsENRRUDCRJHsziYstpknY8',
+		  'clientId': '469741540284-nc63sg32cguq4nki5foukt30kuq5hfk4.apps.googleusercontent.com',
+		  'scope': 'https://www.googleapis.com/auth/drive.metadata.readonly',
+		  'discoveryDocs': ['https://www.googleapis.com/discovery/v1/apis/drive/v3/rest']
+	  }).then(function () {
+		  GoogleAuth = gapi.auth2.getAuthInstance();
+	
+		  // Listen for sign-in state changes.
+		  GoogleAuth.isSignedIn.listen(updateSigninStatus);
+	  });
+	}
+</script>
 </body>
 </html>
