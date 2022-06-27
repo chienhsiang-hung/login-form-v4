@@ -61,7 +61,7 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-  color: #a64bf4;
+  color: #4dc644;
 }
 
 /*---------------------------------------------*/
@@ -182,7 +182,7 @@ iframe {
 
 .wrap-login100 {
   width: 500px;
-  background: #fff;
+  background: rgba(255, 255, 255, 0.95);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -294,11 +294,11 @@ iframe {
 }
 
 .input100:focus + .focus-input100::after {
-  color: #a64bf4;
+  color: #4dc644;
 }
 
 .has-val.input100 + .focus-input100::after {
-  color: #a64bf4;
+  color: #4dc644;
 }
 
 
@@ -335,11 +335,11 @@ iframe {
   z-index: -1;
   width: 300%;
   height: 100%;
-  background: #a64bf4;
-  background: -webkit-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
-  background: -o-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
-  background: -moz-linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
-  background: linear-gradient(right, #00dbde, #fc00ff, #00dbde, #fc00ff);
+  background: #4dc644;
+  background: -webkit-linear-gradient(right, #ddea48, #8df8c6, #ddea48, #8df8c6);
+  background: -o-linear-gradient(right, #ddea48, #8df8c6, #ddea48, #8df8c6);
+  background: -moz-linear-gradient(right, #ddea48, #8df8c6, #ddea48, #8df8c6);
+  background: linear-gradient(right, #ddea48, #8df8c6, #ddea48, #8df8c6);
   top: 0;
   left: -100%;
 
